@@ -32,7 +32,7 @@ function startQuiz() {
 }
 
 function getQuestion(){
-    var currentQuestion = questions[currentQuestionsIndex];
+    var currentQuestion = questions[];
     var titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.title;
     choicesEl.textContent = "";
