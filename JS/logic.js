@@ -12,11 +12,9 @@ var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
-
 startBtn.addEventListener("click", function () {
-    startQuiz();
-  });
-
+  startQuiz();
+});
 
 function startQuiz() {
   //hide start screen
@@ -43,8 +41,8 @@ function choiceClick() {
   }
   currentQuestionIndex++;
   if (currentQuestionIndex === questions.length) {
-    quizEnd()}
-  else {
+    quizEnd();
+  } else {
     getQuestion();
   }
 }
@@ -64,17 +62,14 @@ function getQuestion() {
   });
 }
 
-
-
 function quizEnd() {
-    clearInterval(timerId);
-    var endEl = document.getElementById("end-screen");
-    endEl.removeAttribute("class");
+  clearInterval(timerId);
+  var endEl = document.getElementById("end-screen");
+  endEl.removeAttribute("class");
 
-    var finalScoreEl = document.getElementById("final-score");
-    finalScoreEl.textContent = time;
-    questionsEl.setAttribute("class", "hide");
-
+  var finalScoreEl = document.getElementById("final-score");
+  finalScoreEl.textContent = time;
+  questionsEl.setAttribute("class", "hide");
 }
 
 function clockTick() {
@@ -88,11 +83,15 @@ function clockTick() {
 submitBtn.addEventListener("click", function () {
   saveHighScore();
 });
-;
 
 function saveHighScore() {
+  timerEl.textContent = time;
+  var scoreInfo = {
+    initials: initialsEl.value,
+    score: time,
+  };
+  localStorage.setItem("quiz data", JSON.stringify(scoreInfo));
   
+  var scoreList = document.createElement("li")
+
 }
-
-
-
