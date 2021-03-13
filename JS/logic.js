@@ -11,7 +11,8 @@ var submitBtn = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
-var scoresEl = document.getElementById("hiScoreLink")
+var scoresEl = document.getElementById("hiScoreLink");
+var returnEl = document.getElementById("return");
 
 startBtn.addEventListener("click", function () {
   startQuiz();
@@ -106,29 +107,38 @@ function saveHighScore() {
 
 function viewHighScores() {
   for (i = 0; i < scoreArray.length; i++){
-    console.log("this is i");
+    
     var listItem = document.createElement("li");
     //create a list item
-    listItem.value = scoreArray[i].initials + " " + scoreArray[i].score;
-    
+    listItem = scoreArray[i].initials + " " + scoreArray[i].score;
+    console.log(scoreArray[i].initials + " " + scoreArray[i].score);
   //give the list item a value (from score array)
     var listContainer = document.getElementById("score-list");
     //append li to ul
-    listContainer.appendChild(listItem);
-  }
+    listContainer.append(listItem);
+  } 
+  
 
 }
 
 
 scoresEl.addEventListener("click", function () {
-  console.log("this is being called");
+  document.getElementById("bigScores").setAttribute("style", "display: block");
+  document.getElementById("quiz1").setAttribute("style", "display: none");
   viewHighScores();
   
 });
+
+returnEl.addEventListener("click", function () {
+  document.getElementById("bigScores").setAttribute("style", "display: none");
+  document.getElementById("quiz1").setAttribute("style", "display: block");
+});
+
 //wrap quiz section in a div
 //give that div an id
 //wrap high score section in div
 //give that div a different id
+
 //in css reference high score section give it style display none
 //we already have an event listener on the quiz section button
 //when that button is clicked we are going to reference the high score section
