@@ -8,4 +8,4 @@ Click "Start Quiz" to start the quiz.  Click "View Scores" to see previous score
 #Author
 Arthur Bates
 
-![javaScript quiz](./Assets/quizScreen.png)
+![javaScript quiz](./assets/quizScreen.png)
