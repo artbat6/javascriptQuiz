@@ -102,23 +102,23 @@ function saveHighScore() {
   };
   scoreArray.push(scoreInfo);
   localStorage.setItem("quizData", JSON.stringify(scoreArray));
+  
 }
 
 
 function viewHighScores() {
+  //if (listContainer)return;
   for (i = 0; i < scoreArray.length; i++){
     
     var listItem = document.createElement("li");
     //create a list item
-    listItem = scoreArray[i].initials + " " + scoreArray[i].score;
+    listItem.innerText = scoreArray[i].initials + " " + scoreArray[i].score;
     console.log(scoreArray[i].initials + " " + scoreArray[i].score);
   //give the list item a value (from score array)
     var listContainer = document.getElementById("score-list");
     //append li to ul
     listContainer.append(listItem);
   } 
-  
-
 }
 
 
@@ -138,7 +138,6 @@ returnEl.addEventListener("click", function () {
 //give that div an id
 //wrap high score section in div
 //give that div a different id
-
 //in css reference high score section give it style display none
 //we already have an event listener on the quiz section button
 //when that button is clicked we are going to reference the high score section

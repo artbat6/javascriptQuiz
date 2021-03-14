@@ -1,29 +1,38 @@
 var questions = [
   {
-    title: "Commonly used data types DO NOT include:",
-    choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: "alerts",
-  },
-  {
-    title: "The condition in an if / else statement is enclosed within ______.",
-    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-    answer: "parentheses",
-  },
-  {
-    title: "Arrays in JavaScript can be used to store _______.",
+    title: "How do you create a function in JavaScript?",
     choices: [
-      "numbers and strings",
-      "other arrays",
-      "booleans",
-      "all of the above",
+      "function: myFunction()",
+      "function myFunction()",
+      "function = myFunction()",
+      "function = var",
     ],
-    answer: "all of the above",
+    answer: "function myFunction()",
   },
   {
-    title:
-      "String values must be enclosed within ______ when being assigned to variables.",
-    choices: ["commas", "curly brackets", "quotes", "parentheses"],
-    answer: "quotes",
+    title: 'How do you call a function named "myFunction"',
+    choices: [
+      "call myFunction",
+      "call function myFunction",
+      "myFunction()",
+      'var "myFunction()"',
+    ],
+    answer: "myFunction()",
+  },
+  {
+    title: "Inside which HTML element do we put the JavaScript",
+    choices: ["<js>", "<javaScript>", "<script>", "<scripting>"],
+    answer: "<script>",
+  },
+  {
+    title: 'How do you write "Hello World" in an alert box',
+    choices: [
+      "alertbox(Hello World)",
+      'msg("Hello World")',
+      'msgBox("Hello World")',
+      'alert("Hello World")',
+    ],
+    answer: 'alert("Hello World")',
   },
   {
     title:
